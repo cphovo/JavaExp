@@ -1,3 +1,19 @@
+# MacOS system files
+.DS_Store
+
+# Maven
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Compiled class files
+bin/
+classes/
+
 # Compiled class file
 *.class
 
