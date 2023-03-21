@@ -7,5 +7,7 @@ RUN javac HelloWorld.java && \
 
 # 第二阶段：构建镜像
 FROM alpine:latest
+# 不使用 --static（静态链接）命令时，可以选用包含 glibc-2.34 库的基础镜像
+# FROM frolvlad/alpine-glibc:glibc-2.34
 COPY --from=builder /app/hello-world /app/
 CMD ["/app/hello-world"]
