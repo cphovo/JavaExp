@@ -53,6 +53,8 @@
                             </execution>
                         </executions>
                         <configuration>
+                            <!-- Mac 系统上使用静态链接的方式可能会报错。如果报错，可以去掉 buildArgs 命令 -->
+                            <!-- 使用 Dockerfile 打包成镜像运行没有发现该问题 -->
                             <buildArgs>--static</buildArgs>
                             <agent>
                                 <enabled>true</enabled>

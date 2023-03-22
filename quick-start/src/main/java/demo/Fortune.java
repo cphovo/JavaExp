@@ -3,32 +3,35 @@ package demo;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Fortune {
 
-    private static final Random RANDOM = new Random();
+    private static final SecureRandom RANDOM = new SecureRandom();
     private final ArrayList<String> fortunes = new ArrayList<>();
 
     public Fortune() throws JsonProcessingException {
-        // Scan the file into the array of fortunes
+        // 读取 fortunes.json 文件并解析，保存到 fortunes 列表中
         String json = readInputStream(ClassLoader.getSystemResourceAsStream("fortunes.json"));
         ObjectMapper omap = new ObjectMapper();
         JsonNode root = omap.readTree(json);
         JsonNode data = root.get("data");
         Iterator<JsonNode> elements = data.elements();
         while (elements.hasNext()) {
-            JsonNode quote = elements.next().get("quote");
-            fortunes.add(quote.asText());
+            JsonNode next = elements.next();
+            JsonNode quote = next.get("quote");
+            JsonNode author = next.get("author");
+            fortunes.add(quote.asText() + "\t-- " + author.asText());
         }
     }
 
@@ -48,23 +51,16 @@ public class Fortune {
     }
 
     private void printRandomFortune() throws InterruptedException {
-        //Pick a random number
+        // 随机取出一条 quote 进行打印
         int r = RANDOM.nextInt(fortunes.size());
-        //Use the random number to pick a random fortune
         String f = fortunes.get(r);
-        // Print out the fortune s.l.o.w.l.y
-        for (char c: f.toCharArray()) {
+        for (char c : f.toCharArray()) {
             System.out.print(c);
             Thread.sleep(100);
         }
         System.out.println();
     }
 
-    /**
-     * @param args the command line arguments
-     * @throws java.lang.InterruptedException
-     * @throws com.fasterxml.jackson.core.JsonProcessingException
-     */
     public static void main(String[] args) throws InterruptedException, JsonProcessingException {
         Fortune fortune = new Fortune();
         fortune.printRandomFortune();

@@ -1,13 +1,72 @@
-{"data":[
-{"quote":"First quote", "author": "Someone"},
-{"quote":"Second quote", "author": "Someone else"},
-{"quote":"Author is optional"},
-{"quote":"Text may have *emphasis* (italics) or **strong emphasis** (bold), but please use sparingly."},
-{"quote":"Avoid \"straight quotes\", in favor of “curly quotes” when possible."},
-{"quote":"Prefer double-curly quotes and only use single curly quotes “when ‘quoting inside’ a quote.”"},
-{"quote":"Don't use the straight apostrophe in punctuation! ’Twil be the death of you.”"},
-{"quote":"Don’t use <em>html markup</em>"},
-{"quote":"Single newline characters like this-->\n are converted into <br> tags."},
-{"quote":"Double newline characters like this-->\n\n break the text into separate paragraphs with more whitespace."},
-{"quote":"The last quote in the JSON should not have a trailing comma to pass validation"}
-]}
+{
+  "data": [
+    {
+      "quote": "Success is not final, failure is not fatal: it is the courage to continue that counts.",
+      "author": "Winston Churchill"
+    },
+    {
+      "quote": "Believe you can and you're halfway there.",
+      "author": "Theodore Roosevelt"
+    },
+    {
+      "quote": "All our dreams can come true, if we have the courage to pursue them.",
+      "author": "Walt Disney"
+    },
+    {
+      "quote": "You miss 100% of the shots you don’t take.",
+      "author": "Wayne Gretzky"
+    },
+    {
+      "quote": "In three words I can sum up everything I've learned about life: it goes on.",
+      "author": "Robert Frost"
+    },
+    {
+      "quote": "The future belongs to those who believe in the beauty of their dreams.",
+      "author": "Eleanor Roosevelt"
+    },
+    {
+      "quote": "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+      "author": "Ralph Waldo Emerson"
+    },
+    {
+      "quote": "I have not failed. I've just found 10,000 ways that won't work.",
+      "author": "Thomas Edison"
+    },
+    {
+      "quote": "The best way to predict your future is to create it.",
+      "author": "Abraham Lincoln"
+    },
+    {
+      "quote": "All the darkness in the world cannot extinguish the light of a single candle.",
+      "author": "St. Francis of Assisi"
+    },
+    {
+      "quote": "休言万事转头空，未转头时皆梦。",
+      "author": "苏轼"
+    },
+    {
+      "quote": "枯藤老树昏鸦，小桥流水人家，古道西风瘦马。夕阳西下，断肠人在天涯。",
+      "author": "马致远"
+    },
+    {
+      "quote": "残雪凝辉冷画屏，落梅横笛已三更，更无人处月胧明。",
+      "author": "纳兰性德"
+    },
+    {
+      "quote": "铁盒的序变成了日记，变成了空气，演化成回忆，印象中的爱情好像，抵不住那时间，所以你弃权。",
+      "author": "Jay"
+    },
+    {
+      "quote": "墙里秋千墙外道。墙外行人，墙里佳人笑。",
+      "author": "苏轼"
+    },
+    {
+      "quote": "树深时见鹿，溪午不闻钟。",
+      "author": "李白"
+    },
+    {
+      "quote": "君不见黄河之水天上来，奔流到海不复回。\r\n君不见高堂明镜悲白发，朝如青丝暮成雪。",
+      "author": "李白"
+    }
+  ]
+}
