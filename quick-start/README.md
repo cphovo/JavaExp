@@ -8,7 +8,7 @@
    
    使用 [Dockerfile](Dockerfile.graalvm-jdk17) 自行构建
    ```dockerfile
-   docker image build -t cphovo/graalvm-jdk17:utf-8 -f Dockerfile.graalvm-jdk17 .
+   docker image build -t cphovo/graalvm-jdk17:latest -f Dockerfile.graalvm-jdk17 .
    ```
    或者使用 Docker Hub 上已经构建好的镜像
    ```dockerfile
