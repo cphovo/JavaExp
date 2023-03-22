@@ -1,5 +1,6 @@
 # 第一阶段：编译 Java 程序为二进制文件
 FROM cphovo/graalvm-jdk17:latest AS builder
+# 若未设置支持中文，则打印中文时会乱码
 ENV LANG C.UTF-8
 COPY . /app/
 WORKDIR /app
